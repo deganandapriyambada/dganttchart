@@ -1,8 +1,14 @@
+import { IDGanttChart, IGanttItem } from "./../interface/dganttchart.interface";
+
 class Chart {
 
-    Chart(chartDivName : string){
+    Chart(chartDivName : string, ganttItem : IGanttItem){
         let chartDiv : HTMLElement = document.getElementById(chartDivName)!;
-        chartDiv.append("<b>Hello World</b>");
+        chartDiv.innerHTML = "<B>asddda</B>";
+    }
+
+    generateGanttChartHeader(){
+
     }
 
 }

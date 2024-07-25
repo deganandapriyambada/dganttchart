@@ -1,16 +1,17 @@
 import { chart } from "./services/chart";
+import { IDGanttChart, IGanttItem } from "./interface/dganttchart.interface";
 
-export class DGanttChart {
-    public constructor(chartName : string){
+export class DGanttChart implements IDGanttChart  {
+    public constructor(chartName : string, ganttItem : IGanttItem){
         // build chart
-        chart.Chart(chartName);
+        chart.Chart(chartName, ganttItem);
     }
 }
 
 export {};
 
 declare global {
-    interface Window { DChart: any; }
+    interface Window { DGanttChart: any; }
 }
 
-window.DChart = DGanttChart;
+window.DGanttChart = DGanttChart;

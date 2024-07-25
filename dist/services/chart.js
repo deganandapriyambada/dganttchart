@@ -2,9 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.chart = void 0;
 class Chart {
-    Chart(chartDivName) {
+    Chart(chartDivName, ganttItem) {
         let chartDiv = document.getElementById(chartDivName);
-        chartDiv.append("<b>Hello World</b>");
+        chartDiv.innerHTML = "<B>asddda</B>";
+    }
+    generateGanttChartHeader() {
     }
 }
 const chart = new Chart();
