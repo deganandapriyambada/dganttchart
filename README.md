@@ -24,8 +24,8 @@ import css on your web header ( head )
 
 #### Instantiate the dgantt chart object
 put this on your html page. (usually on the end of body.
-
-    <script>
+```js
+<script>
     let data = [
       {
         startDate: "2024-03",
@@ -60,6 +60,6 @@ put this on your html page. (usually on the end of body.
       },
     ];
     var myChart = new DGanttChart("myganttchart", data, separator);
-    </script>
-
+</script>
+```
 done. you can now refresh your browser and should be able to see the gantt chart.
