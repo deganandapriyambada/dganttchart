@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.monthLov = void 0;
+let monthLov = [];
+exports.monthLov = monthLov;
+monthLov[1] = "Jan";
+monthLov[2] = "Feb";
+monthLov[3] = "Mar";
+monthLov[4] = "Apr";
+monthLov[5] = "May";
+monthLov[6] = "Jun";
+monthLov[7] = "Jul";
+monthLov[8] = "Aug";
+monthLov[9] = "Sep";
+monthLov[10] = "Oct";
+monthLov[11] = "Nov";
+monthLov[12] = "Dec";

@@ -1,0 +1,65 @@
+.gantt-chart {
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+.gantt-chart-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: baseline;
+}
+
+.gantt-chart-header {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    background: #7FC8EF;
+}
+
+.gantt-chart-header > .monthHeading {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.gantt-chart-leftpane > .activity-name {
+    width: 180px;
+    font-size: 14px;
+    height: 50px;
+    text-align: left;
+}
+
+
+.vert {
+    top: 50%;
+    position: relative;
+    transform:translateY(-50%);
+}
+
+.gantt-progress-bar > .progress-bar {
+    height: 50px;
+}
+
+.progress-bar > .period {
+    top: 50%;
+    position: relative;
+    transform:translateY(-50%);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: #727272;
+    color: #fafafa;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+}
+
+.separator {
+    position: relative;
+    background: #3d3d3d;
+    color: #fafafa;
+    height: 50px;
+}

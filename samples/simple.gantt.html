@@ -1,15 +1,49 @@
 <html>
     <head>
         <title> Simple gantt chart </title>
+        <link rel="stylesheet" type="text/css" href="./../styles/style.css">
     </head>
     <body>
         <h1>
-            Simple Gantt Chart
+            Simple Monthly Gantt Chart
         </h1>
         <div id="myganttchart"></div>
         <script src="./../dist/dganttchart.min.js"></script>
         <script>
-            var myChart = new DGanttChart("myganttchart");
+            let data = [
+                {
+                    "startDate": "2024-03",
+                    "endDate": "2024-05",
+                    "itemName": "Interview with User"
+                },
+                {
+                    "startDate": "2024-03",
+                    "endDate": "2024-04",
+                    "itemName": "Backend Development"
+                },
+                {
+                    "startDate": "2024-01",
+                    "endDate": "2025-04",
+                    "itemName": "Backend Unit Testing"
+                },
+                {
+                    "startDate": "2025-01",
+                    "endDate": "2025-06",
+                    "itemName": "Frontend Development"
+                }
+            ];
+
+            let separator = [
+                {
+                    index: 0,
+                    separatorName: "Phase 1: Requirement gathering"
+                },
+                {
+                    index: 1,
+                    separatorName: "Phase 2: Development"
+                }
+            ]
+            var myChart = new DGanttChart("myganttchart", data, separator);
         </script>
     </body>
 </html>

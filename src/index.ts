@@ -1,10 +1,10 @@
 import { chart } from "./services/chart";
-import { IDGanttChart, IGanttItem } from "./interface/dganttchart.interface";
+import { IDGanttChart, IGanttItem, ISeparator } from "./interface/dganttchart.interface";
 
 export class DGanttChart implements IDGanttChart  {
-    public constructor(chartName : string, ganttItem : IGanttItem){
+    public constructor(chartName : string, ganttItem  : Array<IGanttItem>, separator? : Array<ISeparator> ){
         // build chart
-        chart.Chart(chartName, ganttItem);
+        chart.Chart(chartName, ganttItem, window, separator);
     }
 }
 

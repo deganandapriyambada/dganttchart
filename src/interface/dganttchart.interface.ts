@@ -1,11 +1,18 @@
 interface IDGanttChart {
     chartName?: string;
     ganttChartItem? : IGanttItem[];
+    separator?: ISeparator;
 }
 
 interface IGanttItem {
     startDate?: string;
     endDate?: string;
+    itemName? : string;
 }
 
-export { IDGanttChart, IGanttItem }
+interface ISeparator {
+    index?: number,
+    separatorName?: string
+}
+
+export { IDGanttChart, IGanttItem, ISeparator  }
