@@ -26,7 +26,7 @@ class Chart {
         let ganttHeaderMonth = "";
         let startMonth = this.lowestDate.getMonth() + 1;
         let monthNowRendered = startMonth;
-        for (var i = 1; i <= (this.monthDifferences + 1); i++) {
+        for (var i = 1; i <= (this.monthDifferences + 6); i++) {
             ganttHeaderMonth += `
                 <div class="monthHeading">
                     <div class="vert">
@@ -75,9 +75,16 @@ class Chart {
                 let multiplier = new Date(val.startDate).getFullYear() - this.lowestDate.getFullYear() || 0;
                 let length = this.monthDiff(new Date(val.startDate), new Date(val.endDate)) + 2;
                 progressBar += `
-                    <div class="progress-bar" style="width: ${this.monthSize * length}px; margin-left: ${(multiplier * this.monthSize * 12) + (new Date(val.startDate).getMonth()) * this.monthSize}px;">    
-                        <div class="period"><b> ${length} </b> Months ( ${val.startDate} - ${val.endDate} ) </div>
-                    </div>
+                    <ul class="progress-bar">    
+                             <li style="width: ${this.monthSize * length}px; margin-left: ${(multiplier * this.monthSize * 12) + (new Date(val.startDate).getMonth()) * this.monthSize}px;">
+                             <div class="period"><b> ${length} </b> Months</div>
+                             </li>
+                             <li>
+                                <div class="period-info">
+                                ${val.startDate} - ${val.endDate}
+                                </div>
+                             </li>
+                    </ul>
                 
                 `;
                 iterate++;
@@ -102,8 +109,8 @@ class Chart {
                 if (anySeparator !== -1) {
                     activityList += `
                     <div class="activity-name">
-                        <div class="separator" style="width: ${((this.monthDifferences + 1) * this.monthSize) + 180};">
-                            <div class="vert">
+                        <div class="separator" style="width: ${((this.monthDifferences + 6) * this.monthSize) + 180};">
+                            <div class="vert vert-left">
                                 ${separator[anySeparator].separatorName}
                             </div>
                         </div>

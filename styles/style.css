@@ -15,7 +15,8 @@
     flex-direction: row;
     flex-wrap:nowrap;
     align-items: center;
-    background: #7FC8EF;
+    background: #222831; /* month header */
+    color: #dadada;
 }
 
 .gantt-chart-header > .monthHeading {
@@ -39,27 +40,53 @@
     transform:translateY(-50%);
 }
 
+
 .gantt-progress-bar > .progress-bar {
     height: 50px;
 }
 
-.progress-bar > .period {
-    top: 50%;
+.progress-bar  {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.progress-bar > li {
+    display: inline-block;
     position: relative;
+    top: 50%;
     transform:translateY(-50%);
+}
+
+ .period {
+
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    background: #727272;
+    background: #F05454; /* progress bar color */
     color: #fafafa;
     font-size: 12px;
     padding: 5px 10px 5px 10px;
-    border-radius: 15px;
+    border-radius: 0px;
+}
+
+.period-info {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #3d3d3d;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0px;
 }
 
 .separator {
     position: relative;
-    background: #3d3d3d;
-    color: #fafafa;
+    background: #E8E8E8; /* separator topic */
+    color: #3d3d3d;
     height: 50px;
+    font-weight: bolder;
+}
+
+.vert-left {
+    margin-left: 25px;
 }
